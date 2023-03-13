@@ -44,11 +44,6 @@
       "last 1 safari version"
     ]
   },
-  "lint-staged": {
-    "*.{ts,tsx}": [
-      "prettier --write"
-    ]
-  },
   "prettier": {
     "semi": false,
     "singleQuote": true,
@@ -58,5 +53,12 @@
   "devDependencies": {
     "@types/three": "^0.149.0",
     "lint-staged": "^13.2.0"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "lint-staged": {
+    "*.{js,jsx}": ["eslint"],
+    "*.{css,scss}": ["stylelint"]
   }
 }
